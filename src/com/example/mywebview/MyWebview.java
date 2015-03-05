@@ -52,7 +52,7 @@ public class MyWebview extends Activity implements OnClickListener {
 		//设置网页适应手机屏幕
 		webSettings.setLoadWithOverviewMode(true);
 		webSettings.setUseWideViewPort(true);
-		
+		//其他的一些设置
 		webSettings.setSupportZoom(true);// 缩放
 		mWebview.zoomIn();//放大
 		mWebview.zoomOut();//缩小
