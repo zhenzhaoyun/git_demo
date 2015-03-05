@@ -38,10 +38,10 @@ public class MyWebview extends Activity implements OnClickListener {
 //		mWebview.loadUrl("http://www.apengdai.com/appdownload");
 		WebSettings webSettings = mWebview.getSettings();
 		webSettings.setJavaScriptEnabled(true);
-		// Òª´ò¿ªÓÃ»§µã»÷µÄÁ´½Ó£¬Ö»ĞèÒªÓÃsetWebViewClient()·½·¨ÏòÄãµÄWebViewÌá¹©Ò»¸öWebViewClient
+		// è¦æ‰“å¼€ç”¨æˆ·ç‚¹å‡»çš„é“¾æ¥ï¼Œåªéœ€è¦ç”¨setWebViewClient()æ–¹æ³•å‘ä½ çš„WebViewæä¾›ä¸€ä¸ªWebViewClient
 		mWebview.setWebViewClient(new WebViewClient());
-		// Èç¹ûÒ³ÃæÖĞÁ´½Ó£¬Èç¹ûÏ£Íûµã»÷Á´½Ó¼ÌĞøÔÚµ±Ç°browserÖĞÏìÓ¦£¬¶ø²»ÊÇĞÂ¿ªAndroidµÄÏµÍ³browserÖĞÏìÓ¦¸ÃÁ´½Ó£¬±ØĞë¸²¸Ç
-		// webviewµÄWebViewClient¶ÔÏó¡£
+		// å¦‚æœé¡µé¢ä¸­é“¾æ¥ï¼Œå¦‚æœå¸Œæœ›ç‚¹å‡»é“¾æ¥ç»§ç»­åœ¨å½“å‰browserä¸­å“åº”ï¼Œè€Œä¸æ˜¯æ–°å¼€Androidçš„ç³»ç»Ÿbrowserä¸­å“åº”è¯¥é“¾æ¥ï¼Œå¿…é¡»è¦†ç›–
+		// webviewçš„WebViewClientå¯¹è±¡ã€‚
 		mWebview.setWebViewClient(new WebViewClient() {
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				view.loadUrl(url);
@@ -49,23 +49,24 @@ public class MyWebview extends Activity implements OnClickListener {
 			}
 		});
 		mWebview.loadUrl("http://www.baidu.com/");
-		//ÉèÖÃÍøÒ³ÊÊÓ¦ÊÖ»úÆÁÄ»
+		//è®¾ç½®ç½‘é¡µé€‚åº”æ‰‹æœºå±å¹•
 		webSettings.setLoadWithOverviewMode(true);
 		webSettings.setUseWideViewPort(true);
-		//ÆäËûµÄÒ»Ğ©ÉèÖÃ
-		webSettings.setSupportZoom(true);// Ëõ·Å
-		mWebview.zoomIn();//·Å´ó
-		mWebview.zoomOut();//ËõĞ¡
+		//å…¶ä»–çš„ä¸€äº›è®¾ç½®
+		//æµ‹è¯•èƒ½ä¸èƒ½æœ¬åœ°æ›´æ–°gité‡Œè¾¹çš„ä»£ç 
+		webSettings.setSupportZoom(true);// ç¼©æ”¾
+		mWebview.zoomIn();//æ”¾å¤§
+		mWebview.zoomOut();//ç¼©å°
 		webSettings.setDomStorageEnabled(true);
 		webSettings.setLoadsImagesAutomatically(true);
-		webSettings.setPluginsEnabled(true); // Ö§³Ö²å¼ş  surf
-		webSettings.setUserAgent(0); // 0ÎªÊÖ»úÄ¬ÈÏ, 1ÎªPCÌ¨»ú£¬2ÎªIPHONE
+		webSettings.setPluginsEnabled(true); // æ”¯æŒæ’ä»¶  surf
+		webSettings.setUserAgent(0); // 0ä¸ºæ‰‹æœºé»˜è®¤, 1ä¸ºPCå°æœºï¼Œ2ä¸ºIPHONE
 		webSettings.setDefaultTextEncodingName("utf-8");
 //
 		webSettings.setUseWideViewPort(true);
 		webSettings.setLoadWithOverviewMode(true);
-		webSettings.setBuiltInZoomControls(true);// Ö§³ÖÊÖÊÆËõ·Å
-//		webSettings.setDisplayZoomControls(false);// Ö§³ÖÊÖÊÆËõ·Å
+		webSettings.setBuiltInZoomControls(true);// æ”¯æŒæ‰‹åŠ¿ç¼©æ”¾
+//		webSettings.setDisplayZoomControls(false);// æ”¯æŒæ‰‹åŠ¿ç¼©æ”¾
 	
 	}
 	
