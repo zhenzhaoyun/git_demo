@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+	
+    <WebView 
+        android:id="@+id/mwvw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+    
+    <LinearLayout 
+        android:id="@+id/toprl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:orientation="horizontal"
+        android:background="#0611f9"
+        android:layout_gravity="center"
+        >
+        
+	    <Button
+	        android:id="@+id/back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_alignParentLeft="true"
+	        android:background="@drawable/read"
+	        android:text="返回" />
+	    <Button
+	        android:id="@+id/next"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_alignParentLeft="true"
+	        android:text="前进" />
+	    <Button
+	        android:id="@+id/refresh"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_alignParentLeft="true"
+	        android:text="刷新" />
+        
+    </LinearLayout>
+	
+    
+    
+</LinearLayout>
